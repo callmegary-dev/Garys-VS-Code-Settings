@@ -1,10 +1,10 @@
 # Setup Instructions
 
-Follow these steps to install the VS Code configuration.
+Follow these steps to apply the full environment.
 
 ---
 
-## 1. Clone the Repository
+# 1. Clone the Repository
 
 ```bash
 git clone https://github.com/callmegary-dev/Garys-VS-Code-Settings
@@ -12,38 +12,17 @@ git clone https://github.com/callmegary-dev/Garys-VS-Code-Settings
 
 ---
 
-## 2. Locate Your VS Code User Settings Folder
+# 2. Install Fira Code Font
 
-**Windows**
+Download and install **Fira Code**:
 
-```
-C:\Users\YOUR_USERNAME\AppData\Roaming\Code\User
-```
+https://github.com/tonsky/FiraCode
 
----
-
-## 3. Copy the Files
-
-From the cloned repository, copy:
-
-```
-settings.json
-keybindings.json
-```
-
-Paste them into the VS Code **User** folder.
-
-Replace the existing files if prompted.
+Restart VS Code after installing the font.
 
 ---
 
-## 4. Install Extensions
-
-Open a terminal and run:
-
-```bash
-code --install-extension <extension-id>
-```
+# 3. Install VS Code Extensions
 
 Install every extension listed in:
 
@@ -51,26 +30,85 @@ Install every extension listed in:
 extensions.md
 ```
 
----
+Example:
 
-## 5. Install the Font
-
-This setup uses **Fira Code**.
-
-Download and install:
-
-https://github.com/tonsky/FiraCode
-
-After installing the font, restart VS Code.
+```bash
+code --install-extension <extension-id>
+```
 
 ---
 
-## 6. Restart VS Code
+# 4. Apply VS Code Settings
 
-Close and reopen VS Code so all settings apply correctly.
+Open the VS Code user settings folder.
+
+### Windows
+
+```
+C:\Users\YOUR_USERNAME\AppData\Roaming\Code\User
+```
+
+Copy the following files from this repository:
+
+```
+settings.json
+keybindings.json
+```
+
+Paste them into the folder above and replace existing files if prompted.
 
 ---
 
-## Done
+# 5. Setup PowerShell Profile
 
-Your editor should now match the configuration.
+This repository includes a custom PowerShell profile.
+
+Open **PowerShell** and check if a profile exists:
+
+```powershell
+Test-Path $PROFILE
+```
+
+If it returns **False**, create one:
+
+```powershell
+New-Item -ItemType File -Path $PROFILE -Force
+```
+
+---
+
+## Apply the profile
+
+Copy the contents of:
+
+```
+powershell-profile(terminal).ps1
+```
+
+Into your PowerShell profile.
+
+Open the profile with:
+
+```powershell
+notepad $PROFILE
+```
+
+Paste the contents of the file and save.
+
+---
+
+# 6. Reload PowerShell
+
+Run:
+
+```powershell
+. $PROFILE
+```
+
+Restart your terminal.
+
+---
+
+# Done
+
+Your VS Code editor and PowerShell terminal should now match this configuration.
