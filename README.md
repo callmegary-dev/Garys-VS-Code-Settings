@@ -1,6 +1,6 @@
 # Setup Instructions
 
-Follow these steps to apply the full environment.
+Follow the steps in order.
 
 ---
 
@@ -8,39 +8,44 @@ Follow these steps to apply the full environment.
 
 ```bash
 git clone https://github.com/callmegary-dev/Garys-VS-Code-Settings
+cd Garys-VS-Code-Settings
 ```
 
 ---
 
-# 2. Install Fira Code Font
+# 2. Install the Font
 
-Download and install **Fira Code**:
+This setup uses **Fira Code**.
+
+Download and install it:
 
 https://github.com/tonsky/FiraCode
 
-Restart VS Code after installing the font.
+After installing the font, **restart VS Code**.
 
 ---
 
-# 3. Install VS Code Extensions
+# 3. Install Extensions
 
-Install every extension listed in:
+Install all extensions listed in:
 
 ```
 extensions.md
 ```
 
-Example:
+Example command:
 
 ```bash
 code --install-extension <extension-id>
 ```
 
+Repeat for each extension in the list.
+
 ---
 
 # 4. Apply VS Code Settings
 
-Open the VS Code user settings folder.
+Open the VS Code **User settings folder**.
 
 ### Windows
 
@@ -48,28 +53,38 @@ Open the VS Code user settings folder.
 C:\Users\YOUR_USERNAME\AppData\Roaming\Code\User
 ```
 
-Copy the following files from this repository:
+Copy the following files from the cloned repository:
 
 ```
 settings.json
 keybindings.json
 ```
 
-Paste them into the folder above and replace existing files if prompted.
+Paste them into the folder above and **replace existing files** if prompted.
+
+Restart VS Code after replacing the files.
 
 ---
 
 # 5. Setup PowerShell Profile
 
-This repository includes a custom PowerShell profile.
+This repository includes a terminal configuration file:
 
-Open **PowerShell** and check if a profile exists:
+```
+powershell-profile(terminal).ps1
+```
+
+---
+
+## Check if a PowerShell profile exists
+
+Open **PowerShell** and run:
 
 ```powershell
 Test-Path $PROFILE
 ```
 
-If it returns **False**, create one:
+If it returns **False**, create the profile:
 
 ```powershell
 New-Item -ItemType File -Path $PROFILE -Force
@@ -77,29 +92,17 @@ New-Item -ItemType File -Path $PROFILE -Force
 
 ---
 
-## Apply the profile
+## Apply the terminal configuration
 
-Copy the contents of:
-
-```
-powershell-profile(terminal).ps1
-```
-
-Into your PowerShell profile.
-
-Open the profile with:
+Copy the profile from the repository:
 
 ```powershell
-notepad $PROFILE
+Copy-Item ".\powershell-profile(terminal).ps1" $PROFILE -Force
 ```
-
-Paste the contents of the file and save.
 
 ---
 
-# 6. Reload PowerShell
-
-Run:
+## Reload the profile
 
 ```powershell
 . $PROFILE
@@ -111,4 +114,4 @@ Restart your terminal.
 
 # Done
 
-Your VS Code editor and PowerShell terminal should now match this configuration.
+Your **VS Code editor**, **extensions**, and **PowerShell terminal** should now match this configuration.
