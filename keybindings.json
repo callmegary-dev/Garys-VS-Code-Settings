@@ -1,0 +1,103 @@
+[
+	// ======================
+	// RUN & FORMAT
+	// ======================
+
+	{ "key": "shift+space shift+enter", "command": "code-runner.run" },
+	{ "key": "ctrl+alt+n", "command": "-code-runner.run" },
+	{ "key": "ctrl+alt+f", "command": "editor.action.formatDocument", "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor" },
+	{ "key": "shift+alt+f", "command": "-editor.action.formatDocument", "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor" },
+	{ "key": "shift+space shift+z", "command": "bookmarks.toggle", "when": "editorTextFocus" },
+	{ "key": "ctrl+alt+k", "command": "-bookmarks.toggle", "when": "editorTextFocus" },
+	{ "key": "shift+space shift+tab", "command": "prettier.forceFormatDocument" },
+	{ "key": "shift+space shift+tab", "command": "editor.action.formatDocument.multiple" },
+	{ "key": "shift+space shift+tab", "command": "editor.action.formatSelection.multiple" },
+
+	// ======================
+	// DEBUG & TERMINAL
+	// ======================
+
+	{ "key": "ctrl+shift+space ctrl+shift+d", "command": "editor.debug.action.showDebugHover", "when": "editorTextFocus && inDebugMode" },
+	{ "key": "ctrl+k ctrl+i", "command": "-editor.debug.action.showDebugHover", "when": "editorTextFocus && inDebugMode" },
+	{ "key": "ctrl+k ctrl+i", "command": "-list.showHover", "when": "listFocus && !inputFocus && !treestickyScrollFocused" },
+	{ "key": "shift+space shift+backspace", "command": "workbench.action.terminal.killAll" },
+	{ "key": "shift+space shift+/", "command": "workbench.action.terminal.toggleTerminal", "when": "terminal.active" },
+	{ "key": "ctrl+", "command": "-workbench.action.terminal.toggleTerminal", "when": "terminal.active" },
+	{ "key": "shift+alt+backspace", "command": "workbench.action.terminal.kill" },
+	{ "key": "shift+alt+oem_plus", "command": "workbench.action.terminal.new", "when": "terminalProcessSupported || terminalWebExtensionContributedProfile" },
+	{ "key": "ctrl+shift+oem_3", "command": "-workbench.action.terminal.new", "when": "terminalProcessSupported || terminalWebExtensionContributedProfile" },
+
+	// ======================
+	// GIT
+	// ======================
+
+	{ "key": "shift+space shift+p", "command": "git.push" },
+	{ "key": "shift+space shift+p", "command": "git.pushRef" },
+	{ "key": "shift+space shift+p", "command": "git.pushWithTags" },
+	{ "key": "shift+space shift+p", "command": "git.pushTags" },
+	{ "key": "shift+space shift+p", "command": "git.pushForce" },
+
+	// ======================
+	// NOTEBOOK FORMAT
+	// ======================
+
+	{ "key": "shift+space shift+f", "command": "notebook.formatCell", "when": "editorHasDocumentFormattingProvider && editorTextFocus && inCompositeEditor && notebookEditable && !editorReadonly && activeEditor == 'workbench.editor.notebook'" },
+	{ "key": "shift+alt+f", "command": "-notebook.formatCell", "when": "editorHasDocumentFormattingProvider && editorTextFocus && inCompositeEditor && notebookEditable && !editorReadonly && activeEditor == 'workbench.editor.notebook'" },
+	{ "key": "shift+space shift+f", "command": "editor.action.formatDocument.none", "when": "editorTextFocus && !editorHasDocumentFormattingProvider && !editorReadonly" },
+	{ "key": "shift+alt+f", "command": "-editor.action.formatDocument.none", "when": "editorTextFocus && !editorHasDocumentFormattingProvider && !editorReadonly" },
+	{ "key": "shift+space shift+f", "command": "notebook.format", "when": "notebookEditable && !editorTextFocus && activeEditor == 'workbench.editor.notebook'" },
+	{ "key": "shift+alt+f", "command": "-notebook.format", "when": "notebookEditable && !editorTextFocus && activeEditor == 'workbench.editor.notebook'" },
+
+	// ======================
+	// LIVE SERVER
+	// ======================
+
+	{ "key": "ctrl+o ctrl+l", "command": "extension.liveServer.goOnline", "when": "editorTextFocus" },
+	{ "key": "alt+l alt+o", "command": "-extension.liveServer.goOnline", "when": "editorTextFocus" },
+	{ "key": "ctrl+c ctrl+l", "command": "extension.liveServer.goOffline", "when": "editorTextFocus" },
+	{ "key": "alt+l alt+c", "command": "-extension.liveServer.goOffline", "when": "editorTextFocus" },
+
+	// ======================
+	// EDITOR & PANEL
+	// ======================
+
+	{ "key": "shift+space shift+w", "command": "editor.emmet.action.wrapWithAbbreviation" },
+	{ "key": "ctrl+c", "command": "editor.action.clipboardCopyAction" },
+	{ "key": "ctrl+insert", "command": "-editor.action.clipboardCopyAction" },
+	{ "key": "ctrl+c", "command": "editor.action.clipboardCopyWithSyntaxHighlightingAction" },
+	{ "key": "shift+space shift+backspace", "command": "workbench.action.closePanel" },
+	{ "key": "ctrl+alt+z", "command": "workbench.action.toggleSidebarVisibility" },
+	{ "key": "ctrl+b", "command": "-workbench.action.toggleSidebarVisibility" },
+	{ "key": "shift+space shift+j", "command": "workbench.action.togglePanel" },
+	{ "key": "ctrl+j", "command": "-workbench.action.togglePanel" },
+
+	// ======================
+	// SAVE & FILES
+	// ======================
+
+	{ "key": "ctrl+s", "command": "-workbench.action.files.save" },
+	{ "key": "ctrl+s", "command": "workbench.action.files.save" },
+	{ "key": "ctrl+s", "command": "workbench.action.files.saveFiles" },
+	{ "key": "ctrl+shift+k ctrl+shift+o", "command": "workbench.action.files.openFolder", "when": "openFolderWorkspaceSupport" },
+	{ "key": "ctrl+k ctrl+o", "command": "-workbench.action.files.openFolder", "when": "openFolderWorkspaceSupport" },
+	{ "key": "ctrl+shift+k ctrl+shift+o", "command": "workbench.action.files.openLocalFolder", "when": "remoteFileDialogVisible" },
+	{ "key": "ctrl+k ctrl+o", "command": "-workbench.action.files.openLocalFolder", "when": "remoteFileDialogVisible" },
+
+	// ======================
+	// VIM & MISC
+	// ======================
+
+	{ "key": "ctrl+f9", "command": "toggleVim" },
+	{ "key": "ctrl+p", "command": "-extension.vim_ctrl+p", "when": "editorTextFocus && vim.active && vim.use<C-p> && !inDebugRepl || vim.active && vim.use<C-p> && !inDebugRepl && vim.mode == 'CommandlineInProgress' || vim.active && vim.use<C-p> && !inDebugRepl && vim.mode == 'SearchInProgressMode'" },
+	{ "key": "ctrl+j", "command": "extension.vim_escape", "when": "editorTextFocus && vim.active && !inDebugRepl" },
+	{ "key": "escape", "command": "-extension.vim_escape", "when": "editorTextFocus && vim.active && !inDebugRepl" },
+	{ "key": "ctrl+alt+=", "command": "glassit.increase" },
+	{ "key": "ctrl+alt+z", "command": "-glassit.increase" },
+	{ "key": "ctrl+alt+-", "command": "glassit.decrease" },
+	{ "key": "ctrl+alt+c", "command": "-glassit.decrease" },
+	{ "key": "pausebreak", "command": "livePreview.start.preview.atFile" }
+	
+	// ======================
+	// OTHERS
+	// ======================
+]

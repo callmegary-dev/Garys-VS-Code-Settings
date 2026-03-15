@@ -1,0 +1,280 @@
+{
+	// ======================
+	// FILES
+	// ======================
+
+	"files.autoSave": "afterDelay",
+	"files.trimFinalNewlines": true,
+
+	// ======================
+	// EDITOR GENERAL
+	// ======================
+
+	"editor.formatOnSave": true,
+	"editor.formatOnPaste": true,
+	"editor.defaultFormatter": "ms-python.black-formatter",
+
+	"editor.fontFamily": "'Fira Code', Consolas, 'Courier New', monospace",
+	"editor.fontSize": 14.4,
+	"editor.fontLigatures": true,
+
+	"editor.cursorBlinking": "expand",
+	"editor.cursorSmoothCaretAnimation": "on",
+	"editor.overtypeCursorStyle": "line",
+
+	"editor.lineNumbers": "relative",
+	"editor.minimap.enabled": false,
+	"editor.wordWrap": "on",
+	"editor.hover.sticky": false,
+
+	"editor.guides.indentation": true,
+	"editor.guides.bracketPairs": "active",
+	"editor.guides.bracketPairsHorizontal": false,
+
+	"editor.smoothScrolling": true,
+	"editor.scrollbar.vertical": "hidden",
+	"editor.scrollbar.horizontal": "hidden",
+	"editor.scrollbar.verticalScrollbarSize": 0,
+	"editor.scrollbar.horizontalScrollbarSize": 0,
+
+	"editor.inlineSuggest.edits.allowCodeShifting": "never",
+	"editor.inlineSuggest.edits.renderSideBySide": "never",
+
+	"editor.unicodeHighlight.invisibleCharacters": false,
+	"editor.suggest.showStatusBar": true,
+	"editor.accessibilitySupport": "off",
+	"editor.lightbulb.enabled": "off",
+
+	// ======================
+	// TERMINAL
+	// ======================
+
+	"terminal.integrated.defaultProfile.windows": "PowerShell",
+	"terminal.integrated.cursorStyle": "underline",
+	"terminal.integrated.smoothScrolling": true,
+	"terminal.integrated.copyOnSelection": true,
+	"terminal.integrated.initialHint": false,
+	"terminal.integrated.tabs.defaultColor": "terminal.ansiCyan",
+	"terminal.integrated.shellIntegration.decorationsEnabled": "overviewRuler",
+
+	// ======================
+	// WORKBENCH / UI
+	// ======================
+
+	"workbench.colorTheme": "Field Lights",
+	"workbench.iconTheme": "catppuccin-mocha",
+	"workbench.productIconTheme": "fluent-icons",
+
+	"workbench.activityBar.location": "top",
+	"workbench.sideBar.location": "right",
+
+	"workbench.editor.showTabs": "none",
+	"workbench.editor.editorActionsLocation": "hidden",
+	"workbench.editor.empty.hint": "hidden",
+
+	"workbench.panel.showLabels": false,
+	"workbench.layoutControl.enabled": false,
+	"workbench.navigationControl.enabled": false,
+	"workbench.secondarySideBar.defaultVisibility": "hidden",
+
+	"workbench.list.smoothScrolling": true,
+
+	"window.customTitleBarVisibility": "windowed",
+	"window.menuBarVisibility": "compact",
+
+	// ======================
+	// COLORS
+	// ======================
+
+	"workbench.colorCustomizations": {
+		"editor.selectionBackground": "#3f3f7a",
+		"editor.selectionHighlightBackground": "#3f3f7a88",
+		"editor.inactiveSelectionBackground": "#3f3f7a55"
+	},
+
+	// ======================
+	// EXPLORER
+	// ======================
+
+	"explorer.confirmDragAndDrop": false,
+	"explorer.confirmDelete": false,
+
+	// ======================
+	// GIT
+	// ======================
+
+	"git.autofetch": true,
+	"git.enableSmartCommit": true,
+	"git.alwaysSignOff": true,
+	"git.allowForcePush": true,
+	"git.confirmForcePush": false,
+	"git.path": "C:\\Program Files\\Git\\bin\\git.exe",
+	"git.openRepositoryInParentFolders": "always",
+	"git.blame.statusBarItem.enabled": false,
+
+	"scm.diffDecorations": "gutter",
+	"scm.diffDecorationsGutterVisibility": "hover",
+
+	// ======================
+	// CODE RUNNER
+	// ======================
+
+	"code-runner.runInTerminal": true,
+	"code-runner.clearPreviousOutput": true,
+	"code-runner.saveFileBeforeRun": true,
+	"code-runner.showRunCommandInEditorContextMenu": false,
+	"code-runner.showRunIconInEditorTitleMenu": false,
+	"code-runner.preserveFocus": false,
+
+	"code-runner.executorMap": {
+		"javascript": "cls; node",
+		"java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
+		"c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+		"zig": "zig run",
+		"cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+		"objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+		"php": "php",
+		"python": "cls; python -u",
+		"perl": "perl",
+		"perl6": "perl6",
+		"ruby": "ruby",
+		"go": "go run",
+		"lua": "lua",
+		"groovy": "groovy",
+		"powershell": "powershell -ExecutionPolicy ByPass -File",
+		"bat": "cmd /c",
+		"shellscript": "bash",
+		"fsharp": "fsi",
+		"csharp": "scriptcs",
+		"vbscript": "cscript op//Nologo",
+		"typescript": "ts-node",
+		"coffeescript": "coffee",
+		"scala": "scala",
+		"swift": "swift",
+		"julia": "julia",
+		"crystal": "crystal",
+		"ocaml": "ocaml",
+		"r": "Rscript",
+		"applescript": "osascript",
+		"clojure": "lein exec",
+		"haxe": "haxe --cwd $dirWithoutTrailingSlash --run $fileNameWithoutExt",
+		"rust": "cd $dir && rustc $fileName && $dir$fileNameWithoutExt",
+		"racket": "racket",
+		"scheme": "csi -script",
+		"ahk": "autohotkey",
+		"autoit": "autoit3",
+		"dart": "dart",
+		"pascal": "cd $dir && fpc $fileName && $dir$fileNameWithoutExt",
+		"d": "cd $dir && dmd $fileName && $dir$fileNameWithoutExt",
+		"haskell": "runghc",
+		"nim": "nim compile --verbosity:0 --hints:off --run",
+		"lisp": "sbcl --script",
+		"kit": "kitc --run",
+		"v": "v run",
+		"sass": "sass --style expanded",
+		"scss": "scss --style expanded",
+		"less": "cd $dir && lessc $fileName $fileNameWithoutExt.css",
+		"FortranFreeForm": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+		"fortran-modern": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+		"fortran_fixed-form": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+		"fortran": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+		"sml": "cd $dir && sml $fileName",
+		"mojo": "mojo run",
+		"erlang": "escript",
+		"spwn": "spwn build",
+		"pkl": "cd $dir && pkl eval -f yaml $fileName -o $fileNameWithoutExt.yaml",
+		"gleam": "gleam run -m $fileNameWithoutExt"
+	},
+
+	// ======================
+	// PYTHON
+	// ======================
+
+	"python.defaultInterpreterPath": "C:\\Users\\ME\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+	"python.analysis.autoFormatStrings": true,
+
+	// ======================
+	// FORMATTERS
+	// ======================
+
+	"[javascript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+
+	"[html]": {
+		"editor.defaultFormatter": "vscode.html-language-features"
+	},
+
+	"[css]": {
+		"editor.defaultFormatter": "vscode.css-language-features"
+	},
+
+	"prettier.useTabs": true,
+	"js/ts.preferences.quoteStyle": "double",
+
+	// ======================
+	// SPELL CHECK
+	// ======================
+
+	"cSpell.userWords": [
+		"consisely",
+		"Nomic",
+		"ollama",
+		"qwen"
+	],
+
+	"cSpell.hideAddToDictionaryCodeActions": true,
+	"cSpell.autocorrect": false,
+	"cSpell.diagnosticLevel": "Hint",
+	"cSpell.useCustomDecorations": true,
+	"cSpell.textDecoration": "underline dotted red auto",
+
+	// ======================
+	// VIM
+	// ======================
+
+	"vim.useSystemClipboard": true,
+	"vim.hlsearch": true,
+	"vim.statusBarColorControl": false,
+
+	"vim.cursorStylePerMode.insert": "line",
+	"vim.cursorStylePerMode.normal": "block-outline",
+	"vim.cursorStylePerMode.visual": "line-thin",
+	"vim.cursorStylePerMode.visualblock": "line-thin",
+	"vim.cursorStylePerMode.visualline": "line-thin",
+	"vim.cursorStylePerMode.replace": "underline",
+
+	"vim.highlightedyank.enable": true,
+	"vim.highlightedyank.color": "#6a6aff",
+	"vim.highlightedyank.textColor": "#ffffff",
+	"vim.highlightedyank.duration": 115,
+
+	"vim.handleKeys": {
+		"<C-s>": false
+	},
+
+	// ======================
+	// EXTENSIONS
+	// ======================
+
+	"glassit.alpha": 245,
+
+	"liveServer.settings.donotShowInfoMsg": true,
+	"liveServer.settings.donotVerifyTags": true,
+	"liveServer.settings.CustomBrowser": "microsoft-edge",
+
+	"livePreview.customExternalBrowser": "Firefox",
+
+	"errorLens.enabledInMergeConflict": false,
+
+	// ======================
+	// SECURITY / SYSTEM
+	// ======================
+
+	"security.workspace.trust.untrustedFiles": "open",
+	"http.systemCertificatesNode": true
+
+	// ======================
+	// OTHERS
+	// ======================
+}
