@@ -147,6 +147,6 @@ Restart your terminal after running the command.
 
 # Done
 
-Your **VS Code editor**, **extensions**, and **PowerShell terminal** should now match this configuration.
-
 If anything looks incorrect, restart **VS Code**.
+
+Your **VS Code editor**, **extensions**, and **PowerShell terminal** should now *almost* match my configuration. 
